@@ -323,22 +323,28 @@
     }
   </style>
 </head>
+<a id="whatsapp-float" href="#" target="_blank" aria-label="Chat on WhatsApp">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+</a>
 
 <body class="selection:bg-[#7000f2]/30 text-white bg-[#050505] relative">
   <!-- Background (component) added by Aura -->
   <!-- Added filter hue-rotate to shift green aura to purple -->
+  <!-- Aura Background Component -->
   <div class="aura-background-component top-0 w-full h-screen -z-10 absolute" data-alpha-mask="12"
     style="filter: hue-rotate(130deg); mask-image: linear-gradient(to bottom, transparent, black 0%, black 12%, transparent); -webkit-mask-image: linear-gradient(to bottom, transparent, black 0%, black 12%, transparent)">
-    <div class="aura-background-component top-0 w-full -z-10 absolute h-full">
-      <div data-us-project="G2OBjVkMrg8juHghbIqJ" style="width:1440px; height: 900px"></div>
+    <div class="aura-background-component top-0 w-full -z-10 absolute h-full overflow-hidden">
+      <div data-us-project="G2OBjVkMrg8juHghbIqJ" class="w-full h-full min-w-[1440px] min-h-[900px]"
+        style="transform-origin: center center;"></div>
       <script type="text/javascript">
         !function () { if (!window.UnicornStudio) { window.UnicornStudio = { isInitialized: !1 }; var i = document.createElement("script"); i.src = "https://cdn.jsdelivr.net/gh/hiunicornstudio/unicornstudio.js@v2.0.0/dist/unicornStudio.umd.js", i.onload = function () { window.UnicornStudio.isInitialized || (UnicornStudio.init(), window.UnicornStudio.isInitialized = !0) }, (document.head || document.body).appendChild(i) } }();
       </script>
     </div>
   </div>
+
   <!-- Vertical Grid Lines (Container Size) -->
-  <div class="fixed inset-0 z-0 pointer-events-none flex justify-center px-6">
-    <div class="w-full max-w-7xl h-full grid grid-cols-4 border-x border-white/5">
+  <div class="fixed inset-0 z-0 pointer-events-none flex justify-center px-4 sm:px-6">
+    <div class="w-full max-w-7xl h-full grid grid-cols-2 md:grid-cols-4 border-x border-white/5">
       <div
         class="border-r border-white/5 h-full hidden md:block transition-all duration-700 ease-out opacity-0 translate-y-8 blur-sm"
         data-delay="0"></div>
@@ -349,45 +355,66 @@
   </div>
 
   <!-- Background Ambience -->
-  <div class="fixed inset-0 z-0 pointer-events-none">
+  <div class="fixed inset-0 z-0 pointer-events-none overflow-hidden">
     <div class="absolute inset-0 noise-bg"></div>
-    <div class="absolute top-[-10%] left-[20%] w-[30vw] h-[30vw] bg-[#7000f2]/10 rounded-full blur-[120px]"></div>
-    <div class="absolute bottom-[10%] right-[10%] w-[40vw] h-[40vw] bg-neutral-800/20 rounded-full blur-[100px]"></div>
+    <div
+      class="absolute top-[-10%] left-[5%] sm:left-[20%] w-[50vw] sm:w-[40vw] lg:w-[30vw] h-[50vw] sm:h-[40vw] lg:h-[30vw] bg-[#7000f2]/10 rounded-full blur-[80px] sm:blur-[100px] lg:blur-[120px]">
+    </div>
+    <div
+      class="absolute bottom-[5%] sm:bottom-[10%] right-[5%] sm:right-[10%] w-[60vw] sm:w-[50vw] lg:w-[40vw] h-[60vw] sm:h-[50vw] lg:h-[40vw] bg-neutral-800/20 rounded-full blur-[80px] sm:blur-[90px] lg:blur-[100px]">
+    </div>
   </div>
 
   <!-- Navigation -->
-  <nav class="fixed top-0 left-0 right-0 z-50 flex justify-center pt-6 px-4">
+  <nav class="fixed top-0 left-0 right-0 z-50 flex justify-center pt-4 sm:pt-6 px-3 sm:px-4">
     <div
-      class="glass-panel rounded-full px-6 py-3 flex items-center justify-between gap-30 md:gap-40 transition-all duration-300 hover:border-white/20 duration-700 ease-out opacity-0 translate-y-8 blur-sm">
-      <a href="#" class="hover:opacity-80 transition-opacity flex items-center">
+      class="glass-panel rounded-full px-3 sm:px-6 py-2.5 sm:py-3 flex items-center justify-between w-full max-w-[calc(100vw-24px)] sm:max-w-none sm:w-auto gap-3 sm:gap-8 md:gap-12 lg:gap-20 transition-all duration-300 hover:border-white/20">
+      <a href="#" class="hover:opacity-80 transition-opacity flex items-center flex-shrink-0">
         <!-- SVG Logo: Next Automate (NN) -->
-        <img class="logo" src="assets/logo.png" alt="">
+        <img class="logo h-5 sm:h-6 w-auto" src="assets/logo.png" alt="NN Logo">
       </a>
 
-      <div class="hidden md:flex items-center gap-6">
+      <!-- Desktop Navigation Links -->
+      <div class="hidden lg:flex items-center gap-4 xl:gap-6">
         <a href="#projects"
-          class="text-xs text-neutral-400 hover:text-white transition-colors uppercase font-medium font-sans" style="">
+          class="text-xs text-neutral-400 hover:text-white transition-colors uppercase font-medium font-sans whitespace-nowrap">
           Projects
         </a>
         <a href="#capabilities"
-          class="hover:text-white transition-colors uppercase text-xs text-neutral-400 font-medium font-sans" style="">
+          class="hover:text-white transition-colors uppercase text-xs text-neutral-400 font-medium font-sans whitespace-nowrap">
           Services
         </a>
         <a href="#protocol"
-          class="text-xs text-neutral-400 hover:text-white transition-colors uppercase font-medium font-sans" style="">
+          class="text-xs text-neutral-400 hover:text-white transition-colors uppercase font-medium font-sans whitespace-nowrap">
           Process
         </a>
       </div>
 
+      <!-- Mobile Menu Toggle Button -->
+      <button
+        class="lg:hidden text-neutral-400 hover:text-white transition-colors p-1.5 flex items-center justify-center flex-shrink-0"
+        id="mobile-menu-toggle" aria-label="Toggle menu">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+          stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" id="menu-icon">
+          <line x1="3" y1="12" x2="21" y2="12"></line>
+          <line x1="3" y1="6" x2="21" y2="6"></line>
+          <line x1="3" y1="18" x2="21" y2="18"></line>
+        </svg>
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+          stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" id="close-icon"
+          class="hidden">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+
+      <!-- Inquire Button -->
       <a href="#contact"
-        class="group flex items-center gap-2 text-xs bg-white text-black px-4 py-1.5 rounded-full hover:bg-neutral-200 transition-colors font-medium font-sans"
-        style="">
+        class="group hidden lg:flex items-center gap-1.5 sm:gap-2 text-[10px] sm:text-xs bg-white text-black px-2.5 sm:px-4 py-1.5 rounded-full hover:bg-neutral-200 transition-colors font-medium font-sans whitespace-nowrap flex-shrink-0">
         Inquire
-        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
           stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"
-          data-lucide="arrow-right" aria-hidden="true"
-          class="lucide lucide-arrow-right group-hover:translate-x-0.5 transition-transform text-neutral-950 w-[24px] h-[12px] text-white"
-          data-icon-replaced="true" style="width: 24px; height: 12px">
+          class="group-hover:translate-x-0.5 transition-transform w-2.5 h-2.5 sm:w-3.5 sm:h-3.5">
           <path d="M5 12h14"></path>
           <path d="m12 5 7 7-7 7"></path>
         </svg>
@@ -395,9 +422,39 @@
     </div>
   </nav>
 
+  <!-- Mobile Menu Dropdown -->
+  <div id="mobile-menu"
+    class="fixed top-[72px] left-0 right-0 z-40 lg:hidden hidden opacity-0 transition-all duration-300 px-3">
+    <div class="glass-panel rounded-2xl px-6 py-6 flex flex-col gap-5 mx-auto max-w-[calc(100vw-24px)]">
+      <a href="#projects"
+        class="text-sm text-neutral-400 hover:text-white transition-colors uppercase font-medium font-sans border-b border-white/5 pb-4">
+        Projects
+      </a>
+      <a href="#capabilities"
+        class="text-sm hover:text-white transition-colors uppercase text-neutral-400 font-medium font-sans border-b border-white/5 pb-4">
+        Services
+      </a>
+      <a href="#protocol"
+        class="text-sm text-neutral-400 hover:text-white transition-colors uppercase font-medium font-sans border-b border-white/5 pb-4">
+        Process
+      </a>
+      <a href="#contact"
+        class="group flex items-center justify-center gap-2 text-sm bg-white text-black px-4 py-2.5 rounded-full hover:bg-neutral-200 transition-colors font-medium font-sans mt-2">
+        Inquire
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+          stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"
+          class="group-hover:translate-x-0.5 transition-transform w-4 h-4">
+          <path d="M5 12h14"></path>
+          <path d="m12 5 7 7-7 7"></path>
+        </svg>
+      </a>
+    </div>
+  </div>
+
+
+
   <!-- Hero Section -->
-  <section
-    class="min-h-screen flex flex-col overflow-hidden z-10 pt-32 pr-6 pb-20 pl-6 relative items-center justify-center"
+  <section class="min-h-screen flex-col overflow-hidden z-10 pt-32 pr-6 pb-20 pl-6 relative items-center justify-center"
     id="hero-section">
     <div
       class="flex flex-col transition-all duration-1000 text-center opacity-100 max-w-7xl mr-auto ml-auto translate-y-0 items-center">
@@ -411,7 +468,7 @@
 
       <!-- Headline -->
       <h1
-        class="md:text-8xl lg:text-9xl leading-[0.9] bg-clip-text transition-all duration-700 ease-out text-6xl text-transparent tracking-tight bg-gradient-to-b from-white via-white to-neutral-600 mb-8 font-google-sans-flex font-normal"
+        class="md:text-8xl lg:text-9xl leading-[0.9] bg-clip-text transition-all duration-700 ease-out text-6xl text-transparent tracking-tight bg-gradient-to-b from-white via-white to-neutral-600 mb-8 font-google-sans-flex font-normal "
         data-delay="100" style="">
         Automate your business
         <br>
@@ -1395,14 +1452,14 @@
         transform: rotateY(-10deg) rotateX(5deg);
       }
     </style>
-    <div class="grid lg:grid-cols-2 gap-16 max-w-7xl mr-auto ml-auto pr-6 pl-6 gap-x-16 gap-y-16 items-center">
+    <div class="grid lg:grid-cols-2 gap-8 lg:gap-16 max-w-7xl mr-auto ml-auto pr-4 sm:pr-6 pl-4 sm:pl-6 items-center">
       <!-- Left Column: Enhanced 3D Visualization -->
       <div
-        class="perspective-container group h-[500px] w-full flex items-center justify-center relative transition-all duration-700 ease-out opacity-0 translate-y-8 blur-sm"
+        class="perspective-container group h-[400px] sm:h-[500px] w-full flex items-center justify-center relative transition-all duration-700 ease-out opacity-0 translate-y-8 blur-sm"
         data-delay="0">
         <!-- Background Effects -->
         <div
-          class="absolute inset-0 bg-[#7000f2]/20 blur-[120px] rounded-full opacity-20 group-hover:opacity-40 transition-opacity duration-700 animate-pulse"
+          class="absolute inset-0 bg-[#7000f2]/20 blur-[80px] sm:blur-[120px] rounded-full opacity-20 group-hover:opacity-40 transition-opacity duration-700 animate-pulse"
           style="animation-duration: 4s;"></div>
         <div
           class="absolute inset-0 bg-gradient-to-tr from-[#7000f2]/10 via-transparent to-purple-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-700 blur-3xl">
@@ -1410,83 +1467,88 @@
 
         <!-- Main 3D Card -->
         <div
-          class="rotate-card relative w-full h-full bg-[#0A0A0A]/90 border border-white/10 backdrop-blur-xl rounded-2xl flex flex-col overflow-hidden shadow-2xl transition-all duration-500 group-hover:border-white/20">
+          class="rotate-card relative w-full h-full bg-[#0A0A0A]/90 border border-white/10 backdrop-blur-xl rounded-xl sm:rounded-2xl flex flex-col overflow-hidden shadow-2xl transition-all duration-500 group-hover:border-white/20">
           <!-- Grid Background -->
           <div
-            class="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.03)_1px,transparent_1px)] bg-[size:32px_32px] pointer-events-none">
+            class="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.03)_1px,transparent_1px)] bg-[size:24px_24px] sm:bg-[size:32px_32px] pointer-events-none">
           </div>
 
           <!-- Card Header -->
-          <div class="relative z-10 flex items-center justify-between px-6 py-4 border-b border-white/5 bg-white/5">
-            <div class="flex items-center gap-3">
-              <div class="flex gap-1.5">
-                <div class="w-2.5 h-2.5 rounded-full bg-red-500/50"></div>
-                <div class="w-2.5 h-2.5 rounded-full bg-yellow-500/50"></div>
-                <div class="w-2.5 h-2.5 rounded-full bg-green-500/50"></div>
+          <div
+            class="relative z-10 flex items-center justify-between px-3 sm:px-6 py-3 sm:py-4 border-b border-white/5 bg-white/5">
+            <div class="flex items-center gap-2 sm:gap-3 min-w-0">
+              <div class="flex gap-1 sm:gap-1.5 flex-shrink-0">
+                <div class="w-2 h-2 sm:w-2.5 sm:h-2.5 rounded-full bg-red-500/50"></div>
+                <div class="w-2 h-2 sm:w-2.5 sm:h-2.5 rounded-full bg-yellow-500/50"></div>
+                <div class="w-2 h-2 sm:w-2.5 sm:h-2.5 rounded-full bg-green-500/50"></div>
               </div>
               <div
-                class="px-3 py-1 rounded bg-black/40 border border-white/5 text-[10px] text-neutral-400 flex items-center gap-2 font-medium font-sans"
-                style="">
-                <svg class="w-3 h-3 text-neutral-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                class="px-2 sm:px-3 py-1 rounded bg-black/40 border border-white/5 text-[9px] sm:text-[10px] text-neutral-400 flex items-center gap-1.5 sm:gap-2 font-medium font-sans truncate">
+                <svg class="w-2.5 h-2.5 sm:w-3 sm:h-3 text-neutral-600 flex-shrink-0" fill="none" viewBox="0 0 24 24"
+                  stroke="currentColor">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                     d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z">
                   </path>
                 </svg>
-                sim_core_v2.sh
+                <span class="truncate">sim_core_v2.sh</span>
               </div>
             </div>
-            <div class="flex items-center gap-2">
+            <div class="flex items-center gap-1.5 sm:gap-2 flex-shrink-0">
               <span class="w-1.5 h-1.5 rounded-full bg-[#7000f2] animate-pulse"></span>
-              <span class="text-[10px] text-[#7000f2] font-medium font-sans" style="">
+              <span class="text-[9px] sm:text-[10px] text-[#7000f2] font-medium font-sans hidden xs:inline">
                 RUNNING
               </span>
             </div>
           </div>
 
           <!-- Card Body -->
-          <div class="relative z-10 flex-1 p-6 flex flex-col gap-6 overflow-hidden">
+          <div class="relative z-10 flex-1 p-3 sm:p-6 flex flex-col gap-4 sm:gap-6 overflow-hidden">
             <!-- Top Row: Visualization -->
-            <div class="flex gap-6 h-32">
+            <div class="flex gap-3 sm:gap-6 h-24 sm:h-32">
               <!-- Left: Core Usage -->
-              <div class="flex-1 space-y-2">
-                <div class="flex justify-between text-[10px] font-mono text-neutral-500 mb-1">
-                  <span style="" class="font-medium font-sans">
+              <div class="flex-1 space-y-1 sm:space-y-2 min-w-0">
+                <div class="flex justify-between text-[9px] sm:text-[10px] font-mono text-neutral-500 mb-1">
+                  <span class="font-medium font-sans truncate">
                     CORE_LOAD
                   </span>
-                  <span class="text-white font-medium font-sans" style="">
+                  <span class="text-white font-medium font-sans flex-shrink-0 ml-2">
                     84%
                   </span>
                 </div>
-                <div class="flex items-end gap-1 h-20 border-b border-white/5 pb-2">
-                  <div class="w-1.5 h-[40%] bg-[#7000f2]/30 rounded-t-sm animate-pulse"></div>
-                  <div class="w-1.5 h-[70%] bg-[#7000f2]/40 rounded-t-sm animate-pulse delay-75"></div>
-                  <div class="w-1.5 h-[50%] bg-[#7000f2]/30 rounded-t-sm animate-pulse delay-150"></div>
-                  <div class="w-1.5 h-[80%] bg-[#7000f2]/50 rounded-t-sm animate-pulse delay-100"></div>
-                  <div class="w-1.5 h-[60%] bg-[#7000f2]/40 rounded-t-sm animate-pulse delay-300"></div>
+                <div class="flex items-end gap-0.5 sm:gap-1 h-16 sm:h-20 border-b border-white/5 pb-2">
+                  <div class="w-1 sm:w-1.5 h-[40%] bg-[#7000f2]/30 rounded-t-sm animate-pulse"></div>
+                  <div class="w-1 sm:w-1.5 h-[70%] bg-[#7000f2]/40 rounded-t-sm animate-pulse delay-75"></div>
+                  <div class="w-1 sm:w-1.5 h-[50%] bg-[#7000f2]/30 rounded-t-sm animate-pulse delay-150"></div>
+                  <div class="w-1 sm:w-1.5 h-[80%] bg-[#7000f2]/50 rounded-t-sm animate-pulse delay-100"></div>
+                  <div class="w-1 sm:w-1.5 h-[60%] bg-[#7000f2]/40 rounded-t-sm animate-pulse delay-300"></div>
                   <div
-                    class="w-1.5 h-[90%] bg-[#7000f2] rounded-t-sm shadow-[0_0_8px_rgba(112,0,242,0.5)] animate-pulse delay-75">
+                    class="w-1 sm:w-1.5 h-[90%] bg-[#7000f2] rounded-t-sm shadow-[0_0_8px_rgba(112,0,242,0.5)] animate-pulse delay-75">
                   </div>
-                  <div class="w-1.5 h-[40%] bg-[#7000f2]/30 rounded-t-sm animate-pulse delay-200"></div>
-                  <div class="w-1.5 h-[75%] bg-[#7000f2]/40 rounded-t-sm animate-pulse delay-100"></div>
-                  <div class="w-1.5 h-[55%] bg-[#7000f2]/30 rounded-t-sm animate-pulse delay-500"></div>
-                  <div class="w-1.5 h-[85%] bg-[#7000f2]/50 rounded-t-sm animate-pulse delay-150"></div>
+                  <div class="w-1 sm:w-1.5 h-[40%] bg-[#7000f2]/30 rounded-t-sm animate-pulse delay-200"></div>
+                  <div class="w-1 sm:w-1.5 h-[75%] bg-[#7000f2]/40 rounded-t-sm animate-pulse delay-100"></div>
+                  <div class="w-1 sm:w-1.5 h-[55%] bg-[#7000f2]/30 rounded-t-sm animate-pulse delay-500"></div>
+                  <div class="w-1 sm:w-1.5 h-[85%] bg-[#7000f2]/50 rounded-t-sm animate-pulse delay-150"></div>
                 </div>
               </div>
 
               <!-- Right: Circular Metric -->
-              <div class="w-32 flex items-center justify-center relative">
-                <svg class="w-24 h-24 transform -rotate-90">
+              <div class="w-24 sm:w-32 flex items-center justify-center relative flex-shrink-0">
+                <svg class="w-20 h-20 sm:w-24 sm:h-24 transform -rotate-90">
+                  <circle cx="40" cy="40" r="32" stroke="currentColor" stroke-width="3" fill="none"
+                    class="text-white/5 sm:hidden"></circle>
+                  <circle cx="40" cy="40" r="32" stroke="currentColor" stroke-width="3" fill="none"
+                    stroke-dasharray="201" stroke-dashoffset="48" class="text-[#7000f2] sm:hidden"></circle>
                   <circle cx="48" cy="48" r="40" stroke="currentColor" stroke-width="4" fill="none"
-                    class="text-white/5"></circle>
+                    class="text-white/5 hidden sm:block"></circle>
                   <circle cx="48" cy="48" r="40" stroke="currentColor" stroke-width="4" fill="none"
-                    stroke-dasharray="251.2" stroke-dashoffset="60" class="text-[#7000f2]"></circle>
+                    stroke-dasharray="251.2" stroke-dashoffset="60" class="text-[#7000f2] hidden sm:block"></circle>
                 </svg>
                 <div class="absolute inset-0 flex flex-col items-center justify-center">
-                  <span class="text-2xl text-white tracking-tighter animate-pulse font-google-sans-flex font-normal"
-                    style="">
+                  <span
+                    class="text-xl sm:text-2xl text-white tracking-tighter animate-pulse font-google-sans-flex font-normal">
                     98
                   </span>
-                  <span class="text-[9px] text-neutral-500 uppercase font-medium font-sans" style="">
+                  <span class="text-[8px] sm:text-[9px] text-neutral-500 uppercase font-medium font-sans">
                     Score
                   </span>
                 </div>
@@ -1495,52 +1557,52 @@
 
             <!-- Bottom Row: Terminal Log -->
             <div
-              class="flex-1 bg-black/40 rounded-lg border border-white/5 p-3 overflow-hidden font-mono text-[10px] text-neutral-400 space-y-1.5 relative">
+              class="flex-1 bg-black/40 rounded-lg border border-white/5 p-2 sm:p-3 overflow-hidden font-mono text-[8px] sm:text-[10px] text-neutral-400 space-y-1 sm:space-y-1.5 relative">
               <div
                 class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent z-10 pointer-events-none">
               </div>
-              <div class="flex gap-2">
-                <span class="text-blue-400 font-medium font-sans" style="">
+              <div class="flex gap-1.5 sm:gap-2">
+                <span class="text-blue-400 font-medium font-sans flex-shrink-0">
                   ➜
                 </span>
-                <span class="text-white font-medium font-sans" style="">
+                <span class="text-white font-medium font-sans truncate">
                   init_sequence --force
                 </span>
               </div>
-              <div class="flex gap-2">
-                <span class="text-neutral-600 font-medium font-sans" style="">
+              <div class="flex gap-1.5 sm:gap-2">
+                <span class="text-neutral-600 font-medium font-sans flex-shrink-0">
                   10:24:01
                 </span>
-                <span style="" class="font-medium font-sans">
+                <span class="font-medium font-sans truncate">
                   Compiling assets... [OK]
                 </span>
               </div>
-              <div class="flex gap-2">
-                <span class="text-neutral-600 font-medium font-sans" style="">
+              <div class="flex gap-1.5 sm:gap-2">
+                <span class="text-neutral-600 font-medium font-sans flex-shrink-0">
                   10:24:02
                 </span>
-                <span style="" class="font-medium font-sans">
+                <span class="font-medium font-sans truncate">
                   Optimizing routes... [OK]
                 </span>
               </div>
-              <div class="flex gap-2">
-                <span class="text-neutral-600 font-medium font-sans" style="">
+              <div class="flex gap-1.5 sm:gap-2">
+                <span class="text-neutral-600 font-medium font-sans flex-shrink-0">
                   10:24:03
                 </span>
-                <span class="text-[#9d4eff] font-medium font-sans" style="">
+                <span class="text-[#9d4eff] font-medium font-sans truncate">
                   Deployment successful (42ms)
                 </span>
               </div>
-              <div class="flex gap-2">
-                <span class="text-neutral-600 font-medium font-sans" style="">
+              <div class="flex gap-1.5 sm:gap-2 hidden xs:flex">
+                <span class="text-neutral-600 font-medium font-sans flex-shrink-0">
                   10:24:04
                 </span>
-                <span style="" class="font-medium font-sans">
+                <span class="font-medium font-sans truncate">
                   Starting health check...
                 </span>
               </div>
-              <div class="flex gap-2">
-                <span class="text-blue-400 animate-pulse font-medium font-sans" style="">
+              <div class="flex gap-2 hidden xs:flex">
+                <span class="text-blue-400 animate-pulse font-medium font-sans">
                   _
                 </span>
               </div>
@@ -1549,49 +1611,53 @@
 
           <!-- Card Footer -->
           <div
-            class="relative z-10 bg-white/[0.02] border-t border-white/5 p-4 flex justify-between items-center text-[10px] font-mono">
-            <div class="flex gap-4">
-              <div class="flex items-center gap-1.5 text-neutral-400">
-                <svg class="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            class="relative z-10 bg-white/[0.02] border-t border-white/5 p-2.5 sm:p-4 flex justify-between items-center text-[8px] sm:text-[10px] font-mono">
+            <div class="flex gap-2 sm:gap-4">
+              <div class="flex items-center gap-1 sm:gap-1.5 text-neutral-400">
+                <svg class="w-2.5 h-2.5 sm:w-3 sm:h-3 flex-shrink-0" fill="none" viewBox="0 0 24 24"
+                  stroke="currentColor">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                     d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z">
                   </path>
                 </svg>
-                <span style="" class="font-medium font-sans">CPU 12%</span>
+                <span class="font-medium font-sans">CPU 12%</span>
               </div>
-              <div class="flex items-center gap-1.5 text-neutral-400">
-                <svg class="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <div class="flex items-center gap-1 sm:gap-1.5 text-neutral-400">
+                <svg class="w-2.5 h-2.5 sm:w-3 sm:h-3 flex-shrink-0" fill="none" viewBox="0 0 24 24"
+                  stroke="currentColor">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                     d="M19.428 15.428a2 2 0 00-1.022-.547l-2.384-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z">
                   </path>
                 </svg>
-                <span style="" class="font-medium font-sans">MEM 4.2GB</span>
+                <span class="font-medium font-sans hidden xs:inline">MEM 4.2GB</span>
+                <span class="font-medium font-sans xs:hidden">4.2GB</span>
               </div>
             </div>
-            <div class="text-[#7000f2] flex items-center gap-1 font-medium font-sans" style="">
+            <div class="text-[#7000f2] flex items-center gap-1 font-medium font-sans">
               <div class="w-1.5 h-1.5 rounded-full bg-[#7000f2]"></div>
-              Connected
+              <span class="hidden xs:inline">Connected</span>
             </div>
           </div>
         </div>
 
         <!-- Floating Elements -->
         <!-- Right Badge -->
-        <div class="absolute -right-6 top-[20%] z-20 animate-float">
+        <div class="absolute -right-2 sm:-right-6 top-[20%] z-20 animate-float hidden sm:block">
           <div
-            class="bg-[#161618] border border-white/10 p-4 rounded-xl shadow-2xl transform translate-z-10 transition-transform duration-500 group-hover:translate-x-2 group-hover:-translate-y-2">
-            <div class="flex items-center gap-3">
-              <div class="w-8 h-8 rounded-full bg-[#7000f2]/20 flex items-center justify-center">
-                <svg class="w-4 h-4 text-[#7000f2]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            class="bg-[#161618] border border-white/10 p-3 sm:p-4 rounded-xl shadow-2xl transform translate-z-10 transition-transform duration-500 group-hover:translate-x-2 group-hover:-translate-y-2">
+            <div class="flex items-center gap-2 sm:gap-3">
+              <div class="w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-[#7000f2]/20 flex items-center justify-center">
+                <svg class="w-3.5 h-3.5 sm:w-4 sm:h-4 text-[#7000f2]" fill="none" viewBox="0 0 24 24"
+                  stroke="currentColor">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z">
                   </path>
                 </svg>
               </div>
               <div>
-                <div class="text-xs text-white font-medium font-sans" style="">
+                <div class="text-xs text-white font-medium font-sans">
                   Efficiency
                 </div>
-                <div class="text-[10px] text-[#9d4eff] font-medium font-sans" style="">
+                <div class="text-[10px] text-[#9d4eff] font-medium font-sans">
                   +24.5% Boost
                 </div>
               </div>
@@ -1599,16 +1665,17 @@
           </div>
         </div>
 
-        <!-- Left Badge (New) -->
-        <div class="absolute -left-4 bottom-[20%] z-20 animate-float" style="animation-delay: 2s;">
+        <!-- Left Badge -->
+        <div class="absolute -left-2 sm:-left-4 bottom-[20%] z-20 animate-float hidden sm:block"
+          style="animation-delay: 2s;">
           <div
-            class="bg-[#161618] border border-white/10 p-3 rounded-xl shadow-2xl transform translate-z-20 transition-transform duration-500 group-hover:-translate-x-2 delay-75 flex items-center gap-3">
-            <div class="w-2 h-8 bg-blue-500/50 rounded-full"></div>
+            class="bg-[#161618] border border-white/10 p-2.5 sm:p-3 rounded-xl shadow-2xl transform translate-z-20 transition-transform duration-500 group-hover:-translate-x-2 delay-75 flex items-center gap-2 sm:gap-3">
+            <div class="w-2 h-7 sm:h-8 bg-blue-500/50 rounded-full"></div>
             <div>
-              <div class="text-[10px] text-neutral-400 uppercase font-medium font-sans" style="">
+              <div class="text-[9px] sm:text-[10px] text-neutral-400 uppercase font-medium font-sans">
                 Latency
               </div>
-              <div class="text-sm text-white font-medium font-sans" style="">
+              <div class="text-sm text-white font-medium font-sans">
                 14ms
               </div>
             </div>
@@ -1621,59 +1688,59 @@
         <div
           class="absolute -left-8 top-0 bottom-0 w-px bg-gradient-to-b from-transparent via-white/10 to-transparent hidden lg:block">
         </div>
-        <div class="space-y-8">
+        <div class="space-y-6 sm:space-y-8">
           <div class="space-y-2">
-            <h3 class="text-xl text-white font-medium font-sans" style="">
+            <h3 class="text-lg sm:text-xl text-white font-medium font-sans">
               High-Speed Process Automation
             </h3>
-            <p class="leading-relaxed text-sm font-medium text-neutral-400 font-sans">
+            <p class="leading-relaxed text-xs sm:text-sm font-medium text-neutral-400 font-sans">
               Manage high volumes of leads, orders, and operational tasks
               across WhatsApp, web, and internal systems with real-time
               automation, smart status updates, and seamless workflow
               execution.
             </p>
-            <p class="text-neutral-500 text-sm leading-relaxed font-medium font-sans" style="">
+            <p class="text-neutral-500 text-xs sm:text-sm leading-relaxed font-medium font-sans">
               From lead capture to order completion, NEXT AUTOMATE ensures
               every step moves faster—with zero manual follow-ups.
             </p>
           </div>
           <div class="space-y-2">
-            <h3 class="text-xl text-white font-medium font-sans" style="">
+            <h3 class="text-lg sm:text-xl text-white font-medium font-sans">
               Smart Task &amp; Order Routing
             </h3>
-            <p class="text-neutral-400 text-sm leading-relaxed font-medium font-sans" style="">
+            <p class="text-neutral-400 text-xs sm:text-sm leading-relaxed font-medium font-sans">
               Automatically allocate leads, orders, or work jobs to the right
               team, branch, or vendor based on availability, workload,
               location, or priority.
             </p>
-            <p class="text-neutral-500 text-sm leading-relaxed font-medium font-sans" style="">
+            <p class="text-neutral-500 text-xs sm:text-sm leading-relaxed font-medium font-sans">
               Reduce delays and confusion with intelligent routing rules that
               keep operations running smoothly.
             </p>
           </div>
           <div class="space-y-2">
-            <h3 class="text-xl text-white font-medium font-sans" style="">
+            <h3 class="text-lg sm:text-xl text-white font-medium font-sans">
               Effortless Returns &amp; Issue Resolution
             </h3>
-            <p class="text-neutral-400 text-sm leading-relaxed font-medium font-sans" style="">
+            <p class="text-neutral-400 text-xs sm:text-sm leading-relaxed font-medium font-sans">
               Handle rework, rejections, returns, or after-sales requests with
               structured workflows, QC checkpoints, and clear status tracking.
             </p>
-            <p class="text-neutral-500 text-sm leading-relaxed font-medium font-sans" style="">
+            <p class="text-neutral-500 text-xs sm:text-sm leading-relaxed font-medium font-sans">
               Automate customer updates and internal approvals to resolve
               issues faster and maintain transparency.
             </p>
           </div>
           <div class="space-y-2">
-            <h3 class="text-xl text-white font-medium font-sans" style="">
+            <h3 class="text-lg sm:text-xl text-white font-medium font-sans">
               Faster Delivery, Fewer Drop-offs
             </h3>
-            <p class="text-neutral-400 text-sm leading-relaxed font-medium font-sans" style="">
+            <p class="text-neutral-400 text-xs sm:text-sm leading-relaxed font-medium font-sans">
               Improve customer satisfaction with timely updates, faster
               execution, and fewer cancellations through automated reminders,
               alerts, and progress tracking.
             </p>
-            <p class="text-neutral-500 text-sm leading-relaxed font-medium font-sans" style="">
+            <p class="text-neutral-500 text-xs sm:text-sm leading-relaxed font-medium font-sans">
               Stay ahead by ensuring every lead, order, and payment is
               followed up—automatically.
             </p>
@@ -1927,9 +1994,9 @@
                 <div class="text-[10px] uppercase text-neutral-500 font-mono mb-0.5">
                   Direct Line
                 </div>
-                <a href="mailto:hello@nextautomate.in"
+                <a href="mailto:hello@next-automate.com"
                   class="text-white text-sm font-medium font-sans hover:text-[#7000f2] transition-colors">
-                  hello@nextautomate.in
+                  hello@next-automate.com
                 </a>
               </div>
             </div>
@@ -1948,10 +2015,11 @@
                 <div class="text-[10px] uppercase text-neutral-500 font-mono mb-0.5">
                   Mobile
                 </div>
-                <a href="tel:+919136244219"
+                <a id="phone-link" href="tel:+919995222579"
                   class="text-white text-sm font-medium font-sans hover:text-[#7000f2] transition-colors">
-                  +91 9136244219
+                  +91 99952 22579
                 </a>
+
               </div>
             </div>
             <div class="flex items-center gap-4">
@@ -2072,7 +2140,7 @@
           </p>
         </div>
 
-        <div class="flex gap-16">
+        <div class="flex gap-12">
           <div>
             <h4 class="text-white font-medium mb-6">Sitemap</h4>
             <ul class="space-y-4 text-sm text-neutral-500">
@@ -2083,7 +2151,7 @@
               </li>
               <li>
                 <a href="#projects" class="hover:text-[#7000f2] transition-colors">
-                  Work
+                  Projects
                 </a>
               </li>
               <li>
@@ -2138,7 +2206,7 @@
 
       <div class="flex flex-col md:flex-row justify-between items-center pt-8 border-t border-white/5 gap-4">
         <div class="text-[10px] text-neutral-600 font-mono uppercase">
-          © 2024 Next Automate Inc.
+          © 2026 Next Automate PVT.LTD
         </div>
         <div class="text-[10px] text-neutral-600 font-mono uppercase flex items-center gap-2">
           <span class="w-1.5 h-1.5 rounded-full bg-green-500"></span>
@@ -2335,17 +2403,16 @@
           <h2 class="text-3xl md:text-4xl font-google-sans-flex font-normal">
             Case Study: End-to-End Automation for a Growing eCommerce Platform
           </h2>
-          <div class="w-full aspect-video bg-neutral-800 rounded-lg overflow-hidden relative">
-            <div class="absolute inset-0 bg-gradient-to-br from-orange-500/20 to-neutral-900"></div>
-            <div class="absolute inset-0 flex items-center justify-center">
-              <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none"
-                stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"
-                class="text-white/50">
-                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
-                <polyline points="7 10 12 15 17 10"></polyline>
-                <line x1="12" x2="12" y1="15" y2="3"></line>
-              </svg>
+          <div class="w-full aspect-video bg-black-800 rounded-lg overflow-hidden relative">
+
+            <!-- Gradient Overlay -->
+            <div class="absolute inset-0 bg-gradient-to-br from-black-500/20 to-black-900"></div>
+
+            <!-- Center Image -->
+            <div class="w-full aspect-video bg-neutral-800 rounded-lg overflow-hidden">
+              <img src="assets/ecommerce.jpg" class="w-full h-full object-cover" alt="Gemflow">
             </div>
+
           </div>
           <div class="space-y-8 text-neutral-400 text-sm leading-relaxed font-sans">
             <div class="space-y-3">
@@ -2723,7 +2790,7 @@
 
 
   <!-- Modal: Dental -->
-   <!-- Modal 4: Dental -->
+  <!-- Modal 4: Dental -->
   <div id="modal-dental" class="fixed inset-0 z-[100] hidden">
     <div class="absolute inset-0 bg-black/80 backdrop-blur-sm animate-fade-in"
       onclick="this.parentElement.classList.add('hidden'); document.body.style.overflow=''"></div>
@@ -2748,14 +2815,9 @@
           </h2>
           <div class="w-full aspect-video bg-neutral-800 rounded-lg overflow-hidden relative">
             <div class="absolute inset-0 flex items-center justify-center bg-[#7000f2]/10">
-              <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none"
-                stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"
-                class="text-[#7000f2]">
-                <path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z">
-                </path>
-                <path d="m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z">
-                </path>
-              </svg>
+              <div class="w-full aspect-video bg-neutral-800 rounded-lg overflow-hidden">
+                <img src="assets/Dental.png" class="w-full h-full object-cover" alt="Gemflow">
+              </div>
             </div>
           </div>
 
@@ -2933,6 +2995,72 @@
     </div>
   </div>
 
+  <script>
+    // Mobile menu toggle functionality
+    const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const menuIcon = document.getElementById('menu-icon');
+    const closeIcon = document.getElementById('close-icon');
+
+    if (mobileMenuToggle && mobileMenu) {
+      mobileMenuToggle.addEventListener('click', () => {
+        const isHidden = mobileMenu.classList.contains('hidden');
+
+        if (isHidden) {
+          // Show menu
+          mobileMenu.classList.remove('hidden');
+          setTimeout(() => {
+            mobileMenu.classList.remove('opacity-0');
+            mobileMenu.classList.add('opacity-100');
+          }, 10);
+          menuIcon.classList.add('hidden');
+          closeIcon.classList.remove('hidden');
+        } else {
+          // Hide menu
+          mobileMenu.classList.remove('opacity-100');
+          mobileMenu.classList.add('opacity-0');
+          setTimeout(() => {
+            mobileMenu.classList.add('hidden');
+          }, 300);
+          menuIcon.classList.remove('hidden');
+          closeIcon.classList.add('hidden');
+        }
+      });
+
+      // Close menu when clicking on a link
+      const mobileLinks = mobileMenu.querySelectorAll('a');
+      mobileLinks.forEach(link => {
+        link.addEventListener('click', () => {
+          mobileMenu.classList.remove('opacity-100');
+          mobileMenu.classList.add('opacity-0');
+          setTimeout(() => {
+            mobileMenu.classList.add('hidden');
+          }, 300);
+          menuIcon.classList.remove('hidden');
+          closeIcon.classList.add('hidden');
+        });
+      });
+
+      // Close menu when clicking outside
+      document.addEventListener('click', (e) => {
+        if (!mobileMenuToggle.contains(e.target) && !mobileMenu.contains(e.target)) {
+          if (!mobileMenu.classList.contains('hidden')) {
+            mobileMenu.classList.remove('opacity-100');
+            mobileMenu.classList.add('opacity-0');
+            setTimeout(() => {
+              mobileMenu.classList.add('hidden');
+            }, 300);
+            menuIcon.classList.remove('hidden');
+            closeIcon.classList.add('hidden');
+          }
+        }
+      });
+    }
+  </script>
+
+
+
+
   <!-- Initialization Scripts -->
   <script>
     // Lucide Icons
@@ -2970,6 +3098,57 @@
       animatedElements.forEach((el) => observer.observe(el));
     });
   </script>
+
+
+  <script>
+    const UAE_NUMBER = "971502352579";
+    const INDIA_NUMBER = "919995222579";
+
+    const phoneLink = document.getElementById("phone-link");
+
+    // Default (India)
+    phoneLink.href = `tel:+${INDIA_NUMBER}`;
+    phoneLink.innerText = "+91 99952 22579";
+
+    fetch("https://ipapi.co/json/")
+      .then(response => response.json())
+      .then(data => {
+        if (data.country_code === "AE") {
+          phoneLink.href = `tel:+${UAE_NUMBER}`;
+          phoneLink.innerText = "+971 50 235 2579";
+        }
+      })
+      .catch(err => {
+        console.log("Location detection failed:", err);
+        // India stays as fallback
+      });
+  </script>
+  <script>
+  const phoneLink = document.getElementById("phone-link");
+  
+  // Default (India) - using obfuscation
+  const defaultNumber = atob("OTE5OTk1MjIyNTc5"); // Base64 encoded
+  const defaultDisplay = "+91 99952 22579";
+  
+  phoneLink.href = `tel:+${defaultNumber}`;
+  phoneLink.innerText = defaultDisplay;
+  
+  // Detect location and update if UAE
+  fetch("https://ipapi.co/json/")
+    .then(response => response.json())
+    .then(data => {
+      if (data.country_code === "AE") {
+        const uaeNumber = atob("OTcxNTAyMzUyNTc5"); // Base64 encoded
+        phoneLink.href = `tel:+${uaeNumber}`;
+        phoneLink.innerText = "+971 50 235 2579";
+      }
+    })
+    .catch(err => {
+      console.log("Location detection failed:", err);
+      // India stays as fallback
+    });
+</script>
+
 
 </body>
 
