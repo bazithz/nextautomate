@@ -1865,7 +1865,6 @@
                   class="text-white text-sm font-medium font-sans hover:text-[#7000f2] transition-colors">
                   +91 99952 22579
                 </a>
-
               </div>
             </div>
             <div class="flex items-center gap-4">
@@ -1888,7 +1887,8 @@
             </div>
           </div>
         </div>
-        <!-- Right Column -->
+
+        <!-- Right Column - Contact Form -->
         <div class="relative">
           <div
             class="bg-[#0A0A0A] border border-white/10 rounded-2xl p-6 md:p-8 relative overflow-hidden group hover:border-white/20 transition-colors duration-500">
@@ -1949,14 +1949,40 @@
                     placeholder="+91 98765 00000">
                 </div>
               </div>
+              
+              <!-- System Requirements with AI Button -->
               <div class="space-y-1.5">
-                <label class="text-[14px] uppercase text-white-500 font-mono tracking-wider">
-                  System Requirements
-                </label>
-                <textarea rows="3" name="message" required
-                  class="w-full bg-white/[0.03] border border-white/5 rounded px-4 py-3 text-white text-sm focus:outline-none focus:border-[#7000f2] focus:bg-white/[0.05] transition-all placeholder:text-neutral-800 resize-none font-sans"
-                  placeholder="Describe the workflow you want to automate..."></textarea>
+                <div class="flex justify-between items-center">
+                  <label class="text-[14px] uppercase text-white-500 font-mono tracking-wider">
+                    System Requirements
+                  </label>
+                  <span class="text-[10px] text-neutral-600 font-mono">✨ AI-Powered</span>
+                </div>
+                <div class="relative">
+                  <textarea 
+                    id="messageTextarea"
+                    rows="4" 
+                    name="message" 
+                    required
+                    class="w-full bg-white/[0.03] border border-white/5 rounded px-4 py-3 pr-36 text-white text-sm focus:outline-none focus:border-[#7000f2] focus:bg-white/[0.05] transition-all placeholder:text-neutral-800 resize-none font-sans"
+                    placeholder="Type a brief description (e.g., 'sales automation') and click Generate..."></textarea>
+                  
+                  <!-- AI Generate Button - Initially Hidden -->
+                  <button 
+                    type="button" 
+                    id="aiGenerateBtn"
+                    class="hidden absolute right-2 top-2 px-3 py-1.5 bg-gradient-to-r from-[#7000f2] to-[#5a00c2] hover:from-[#5a00c2] hover:to-[#7000f2] text-white text-xs rounded-lg font-medium transition-all flex items-center gap-1.5 shadow-lg hover:shadow-[#7000f2]/20 hover:shadow-xl">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="animate-pulse">
+                      <path d="M12 2v4m0 12v4M4.93 4.93l2.83 2.83m8.48 8.48l2.83 2.83M2 12h4m12 0h4M4.93 19.07l2.83-2.83m8.48-8.48l2.83-2.83"></path>
+                    </svg>
+                    <span id="generateBtnText">Generate Details</span>
+                  </button>
+                </div>
+                <p class="text-[10px] text-neutral-600 font-mono mt-1">
+                  💡 Tip: Type a short phrase and let AI expand it into a detailed description
+                </p>
               </div>
+
               <button type="submit" id="submitBtn"
                 class="w-full bg-white text-black rounded h-12 text-sm font-medium hover:bg-neutral-200 transition-colors flex items-center justify-center gap-2 group/btn mt-2 font-sans">
                 <span id="btnText">Initialize Request</span>
@@ -1984,6 +2010,8 @@
       </div>
     </div>
   </section>
+
+
 
   <!-- Footer -->
   <footer class="border-t border-white/5 bg-[#020202] pt-20 pb-10 relative z-10">
